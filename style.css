@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(232, 236, 236);
+    
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 150px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    box-shadow: 0 0 30px #afafaf;
+}
+h2{
+    color: #6e4f4f;
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+h2 img{
+    width: 40px;
+    display: flex;
+    /* position: absolute; */
+    /* float: right; */
+    /* right: 0; */
+    background: url(images/checked.png);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 2px solid black;
+    border-radius: 50px;
+
+}
+#input-box{
+    flex: 1;
+    border: none;
+    padding: 12px;
+    outline: none;
+    background: transparent;
+
+
+
+}
+input::placeholder{
+    font-size: 18px;
+    color: rgb(61, 61, 141);
+}
+button{
+    border: none;
+    background-color: rgb(24, 131, 24);
+    padding: 10px;
+    border-radius: 30px;
+    margin: 0px 2px ;
+    }
+#list-container{
+    margin-top: 20px;
+
+}
+#list-container li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-block: 10px;
+}
+#list-container li::before{
+    content: '' ;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: url(images/unchecked.png);
+     background-size: cover;
+     position: center;
+     top: 10px;
+     left: 8px;
+}
+ul li.checked{  
+    background: #3700a4;
+    color: #fff;
+    border-radius: 50px;
+}
+#list-container li.checked::before{
+    background: url(images/checked.png);
+    background-size: cover;
+}
+ul li span{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    text-align: center ;
+    line-height: 30px;
+}
+ul li span:hover{
+    background-color: black;
+    color: wheat;
+}
+ul li.checked span{
+    color: #fff;
+}
+ul li.checked span:hover{
+    background-color: #fff;
+    color: black;
+}
